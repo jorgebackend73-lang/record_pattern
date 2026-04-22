@@ -31,5 +31,31 @@ public class App {
     	
     	imprimirDetalles(libro);
     	
+    	/**
+    	 * Comentario pra javadoc (herramienta que analiza tu código para extaer tus comentarios
+    	 * crados asi.
+    	 */
+    	
+    	/*
+    	 * Record patterns can also be nested, allowing you to destructure complex 
+    	 * object graphs in a single step.
+    	 * */
+    	
+    	Library library = Library.builder()
+    			.name("Bibliotéca de Móstoles")
+    			.bestseller(
+    				Book.builder()
+    					.title("Java programing")
+    					.author("John Doe")
+    					.build()
+    				)
+    			.build();
+    	
+    	if (library instanceof Library(String nombre, Book(var titulo, var autor))) {
+    		System.out.println("En la Biblioteca: " + nombre + ", el bestseller es: " + 
+    				titulo + ", por el autor: " + autor);
+    		
+    	}
+    	
     }
 }
