@@ -8,10 +8,13 @@ public class App {
 	// y ademas estructura del tipo record que es uno de los record patterns.
 	static void imprimirDetalles(Object obj) {
 		
-		// ¿Cómo sería en versiones anteriores a java 21 donde no existia record patterns?
-		if (obj instanceof Book book) {
-			System.out.println("Titulo del libro: " + book.title());
-			System.out.println("Autor del libro: " + book.author());
+		// En Java 21 con Record Pattern, especificamente con destructure
+		// Lo desestrucutra todo y no hace falta ni llamar a las variables con el mismo 
+		// nombre con el que fueron creadas.
+		// Nos coge directamente lo que hemos creado más abajo.
+		if (obj instanceof Book(String titulo, String autor)) {
+			System.out.println("Titulo del libro: " + titulo);
+			System.out.println("Autor del libro: " + autor);
 		}
 	}
 	
